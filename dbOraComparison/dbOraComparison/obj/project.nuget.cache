@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "ULe1Lw8WY8ZO0WJfH56pTmUnyww3E7m7HDVwI5EOZrEnjm6nqtsyaar0FNL1sjllG8/FQPsTfYWXIgWfJAaQGA==",
+  "success": true,
+  "projectFilePath": "C:\\Temp\\Two_Databases_Comparison\\dbOraComparison\\dbOraComparison\\dbOraComparison.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\microsoft.netcore.platforms.5.0.4.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\oracle.manageddataaccess.core\\3.21.90\\oracle.manageddataaccess.core.3.21.90.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\system.diagnostics.performancecounter\\6.0.0\\system.diagnostics.performancecounter.6.0.0.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\system.directoryservices\\5.0.0\\system.directoryservices.5.0.0.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\system.directoryservices.protocols\\5.0.1\\system.directoryservices.protocols.5.0.1.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\system.io.filesystem.accesscontrol\\5.0.0\\system.io.filesystem.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\theodoros.h\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
