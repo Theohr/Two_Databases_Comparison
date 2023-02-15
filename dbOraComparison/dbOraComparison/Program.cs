@@ -2,7 +2,9 @@
 using System.Data;
 using System.IO;
 using Oracle.ManagedDataAccess.Client;
-
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Collections.Generic;
 
 namespace dbOraComparison
 {
@@ -68,10 +70,13 @@ namespace dbOraComparison
             Console.WriteLine("Printing all Tables and Rows received from both Databases...");
             Console.WriteLine();
 
+            List<Results> _data = new List<Results>();
+
             FileStream ostrm;
             StreamWriter writer;
             TextWriter oldOut = Console.Out;
-            string fileName = @"C:\Temp\dbCompLog.json";
+
+            string fileName = @"C:\Temp\dbCompLog.txt";
 
             if (File.Exists(fileName))
             {
@@ -87,7 +92,7 @@ namespace dbOraComparison
 
             foreach (DataRow row in dtTableNames25.Rows)
             {
-               
+                List<tableData> tablesAll = new List<tableData>();
                 string tableName25 = row["TABLE_NAME"].ToString();
                 string tableName230 = dtTableNames230.Rows[i]["TABLE_NAME"].ToString();
                 string numRows25 = row["TABLE_ROWS_COUNT"].ToString();
@@ -108,6 +113,23 @@ namespace dbOraComparison
                     Console.WriteLine("Live Table Name: " + tableName25 + ", Table Rows Count: " + numRows25 + " || Test Table Name: " + tableName230 + ", Table Rows Count: " + numRows230 + "");
                     Console.WriteLine("Table " + tableName25 + " Difference = " + charDiffTable + " | Rows Difference: " + charDiffRows + "");
                     Console.WriteLine();
+
+                    tablesAll.Add(new tableData()
+                    {
+                        TABLE_NAME = tableName25,
+                        ROWS_COUNT = numRows25
+                    });
+                    tablesAll.Add(new tableData()
+                    {
+                        TABLE_NAME = tableName230,
+                        ROWS_COUNT = numRows230
+                    });
+                    _data.Add(new Results()
+                    {
+                        data = tablesAll,
+                        TABLE_DIFFERENCE = charDiffTable,
+                        ROWS_DIFFERENCE = charDiffRows
+                    });
                 }
                 else
                 {
@@ -119,8 +141,24 @@ namespace dbOraComparison
                     Console.WriteLine("Live Table Name: " + tableName25 + ", Table Rows Count: " + numRows25 + " || Table Name: " + tableName25 + " does not exit in Test Database.");
                     Console.WriteLine("Table " + tableName25 + " Difference = " + charDiffTable + " | Rows Difference: " + charDiffRows + "");
                     Console.WriteLine();
-                }
 
+                    tablesAll.Add(new tableData()
+                    {
+                        TABLE_NAME = tableName25,
+                        ROWS_COUNT = numRows25
+                    });
+                    tablesAll.Add(new tableData()
+                    {
+                        TABLE_NAME = "N/A",
+                        ROWS_COUNT = "N/A"
+                    });
+                    _data.Add(new Results()
+                    {
+                        data = tablesAll,
+                        TABLE_DIFFERENCE = charDiffTable,
+                        ROWS_DIFFERENCE = charDiffRows
+                    });
+                }
             }
 
             Console.WriteLine("Total Table Differences = " + tableDifference + " | Total Rows Differences: " + rowDifference + "");
@@ -129,7 +167,19 @@ namespace dbOraComparison
             writer.Close();
             ostrm.Close();
 
-            Console.WriteLine("Log File Exported!");
+            Console.WriteLine("Log File Exported Successfully!");
+
+            string fileName1 = @"C:\Temp\dbCompLog.json";
+
+            if (File.Exists(fileName1))
+            {
+                File.Delete(fileName1);
+            }
+
+            string json = JsonSerializer.Serialize(_data);
+            File.WriteAllText(fileName1, json);
+
+            Console.WriteLine("Json Exported Succesfully!");
         }
     }
 }
