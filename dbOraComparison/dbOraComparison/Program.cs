@@ -63,7 +63,6 @@ namespace dbOraComparison
                 }
             }
 
-            int i = 0;
             int tableDifference = 0;
             int rowDifference = 0;
 
@@ -94,16 +93,27 @@ namespace dbOraComparison
             {
                 List<tableData> tablesAll = new List<tableData>();
                 string tableName25 = row["TABLE_NAME"].ToString();
-                string tableName230 = dtTableNames230.Rows[i]["TABLE_NAME"].ToString();
                 string numRows25 = row["TABLE_ROWS_COUNT"].ToString();
-                string numRows230 = dtTableNames230.Rows[i]["TABLE_ROWS_COUNT"].ToString();
                 string charDiffTable = "N";
                 string charDiffRows = "N";
+                string tableName230 = "";
+                string numRows230 = "";
+
+                foreach (DataRow rowTest in dtTableNames230.Rows)
+                {
+                    if(tableName25 == rowTest["TABLE_NAME"].ToString())
+                    {
+                        tableName230 = rowTest["TABLE_NAME"].ToString();
+                        numRows230 = rowTest["TABLE_ROWS_COUNT"].ToString();
+
+                        goto endOfLoop;
+                    }
+                }
+
+                endOfLoop:
 
                 if (tableName25 == tableName230)
                 {
-                    i += 1;
-
                     if (numRows25 != numRows230)
                     {
                         rowDifference += 1;

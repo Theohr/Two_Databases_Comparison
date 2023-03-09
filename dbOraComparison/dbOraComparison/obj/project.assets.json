@@ -648,11 +648,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\Two_Databases_Comparison\\dbOraComparison\\dbOraComparison\\dbOraComparison.csproj",
+      "projectUniqueName": "C:\\Temp\\dotNetVBCSharpProjects\\dbOraComparison\\dbOraComparison\\dbOraComparison.csproj",
       "projectName": "dbOraComparison",
-      "projectPath": "C:\\Temp\\Two_Databases_Comparison\\dbOraComparison\\dbOraComparison\\dbOraComparison.csproj",
+      "projectPath": "C:\\Temp\\dotNetVBCSharpProjects\\dbOraComparison\\dbOraComparison\\dbOraComparison.csproj",
       "packagesPath": "C:\\Users\\theodoros.h\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\Two_Databases_Comparison\\dbOraComparison\\dbOraComparison\\obj\\",
+      "outputPath": "C:\\Temp\\dotNetVBCSharpProjects\\dbOraComparison\\dbOraComparison\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\theodoros.h\\AppData\\Roaming\\NuGet\\NuGet.Config",

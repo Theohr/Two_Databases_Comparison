@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ULe1Lw8WY8ZO0WJfH56pTmUnyww3E7m7HDVwI5EOZrEnjm6nqtsyaar0FNL1sjllG8/FQPsTfYWXIgWfJAaQGA==",
+  "dgSpecHash": "8Bg4ee2UxcJAyJ4gttvcQTAk126hUWpE0CplZoe7D9iNJwqEfsD8/j6rPhf3FORnYtMNsMzs9bhBvhXp9WeoWw==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\Two_Databases_Comparison\\dbOraComparison\\dbOraComparison\\dbOraComparison.csproj",
+  "projectFilePath": "C:\\Temp\\dotNetVBCSharpProjects\\dbOraComparison\\dbOraComparison\\dbOraComparison.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\theodoros.h\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\theodoros.h\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.4\\microsoft.netcore.platforms.5.0.4.nupkg.sha512",
